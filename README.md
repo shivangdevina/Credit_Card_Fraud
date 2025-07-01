@@ -1,60 +1,52 @@
-# 📈 Netflix Stock Prediction Using Twitter Sentiment Analysis
+# 💳 Credit Card Fraud Detection Analysis
 
-**Netflix Stock Prediction Using Twitter Sentiment Analysis** is a **Python-based data science project** that combines **natural language processing (NLP)** and **machine learning (ML)** to analyze how Twitter sentiment may influence **Netflix’s stock price trends**.
+**Credit Card Fraud Detection Analysis** is a **Python-based machine learning project** that aims to identify fraudulent credit card transactions using classification algorithms and robust techniques for handling highly imbalanced data.  
 
-This project scrapes tweets, performs sentiment analysis, merges the results with historical stock data, and uses predictive models to forecast future stock movements.
+The project leverages a dataset from **Kaggle** (`mlg-ulb/creditcardfraud`) and demonstrates end-to-end workflows in a **Jupyter Notebook** environment.
 
 ---
 
 ## 🚀 Features
 
-- **Tweet Scraping:** Collects real-time or historical tweets about Netflix using Twitter API or `snscrape`.
-- **Sentiment Analysis:** Analyzes tweet sentiment using tools like **TextBlob** or **VADER**.
-- **Data Integration:** Merges sentiment scores with historical stock data.
-- **Machine Learning Models:** Trains regression or time series models to predict stock price movements.
-- **Visualization:** Plots sentiment trends, stock prices, and prediction results for easy analysis.
-- **Performance Metrics:** Evaluates model accuracy using metrics such as **RMSE** and **R²**.
+- **Data Exploration:** Analyze features such as `Time`, `Amount`, anonymized variables (`V1`–`V28`), and the `Class` label (0 = non-fraud, 1 = fraud).
+- **Data Preprocessing:** Handle missing values, scale features, and apply dimensionality reduction (`PCA`, `t-SNE`, `TruncatedSVD`).
+- **Imbalanced Data Handling:** Use **SMOTE** for oversampling and **NearMiss** for undersampling to balance classes.
+- **Model Training:** Train classifiers such as Logistic Regression, SVC, KNN, Decision Tree, and Random Forest.
+- **Evaluation:** Evaluate models using metrics like precision, recall, F1-score, ROC-AUC, and accuracy, with cross-validation (`KFold`, `StratifiedKFold`).
+- **Visualization:** Visualize correlations, scatter plots, and dimensionality reduction results using **Matplotlib** and **Seaborn**.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### 📊 Data & Analysis
-
+### 🧩 Programming Language
 - **Python 3.x**
-- `pandas`, `numpy` — Data manipulation
-- `matplotlib`, `seaborn` — Visualizations
-- `tweepy` or `snscrape` — Twitter data collection
-- `TextBlob`, `VADER` — Sentiment scoring
-- `scikit-learn` — Machine learning models
-- `yfinance` — Stock price data
 
-### 🗂️ Storage
+### 🗃️ Libraries
+- **Data Processing:** `pandas`, `numpy`
+- **Machine Learning:** `scikit-learn`, `tensorflow`, `imbalanced-learn`
+- **Visualization:** `matplotlib`, `seaborn`
+- **Dimensionality Reduction:** `sklearn.decomposition.PCA`, `sklearn.manifold.TSNE`, `sklearn.decomposition.TruncatedSVD`
+- **Model Evaluation:** `sklearn.metrics`, `imblearn.metrics`
 
-- **CSV files** for saving tweets and stock data
-- Local storage for plots and model outputs
-
-### 🧪 Environment
-
-- **Jupyter Notebook** for development and experimentation
+### 📂 Dataset
+- **Kaggle Dataset:** [mlg-ulb/creditcardfraud](https://www.kaggle.com/mlg-ulb/creditcardfraud)
 
 ---
 
 ## ✅ Prerequisites
 
-Before you begin, make sure you have:
-
-- **Python 3.8 or higher**
-- **pip** for installing dependencies
-- **API keys** if using the Twitter API (or use `snscrape` if you prefer no authentication)
-- Basic knowledge of running **Jupyter Notebooks**
+- **Python 3.8+**
+- **Jupyter Notebook** or **JupyterLab**
+- **Kaggle account & API token** for dataset access
+- Required Python packages (see `Requirements.txt`)
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1️⃣ **Clone the Repository**
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone <repository-url>
-cd netflix-stock-sentiment
+cd credit-card-fraud-detection
